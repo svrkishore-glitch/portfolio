@@ -1,0 +1,119 @@
+{
+  "username": "svr_kishore",
+  "submitStats": {
+    "acSubmissionNum": [
+      {
+        "difficulty": "All",
+        "count": 53,
+        "submissions": 70
+      },
+      {
+        "difficulty": "Easy",
+        "count": 27,
+        "submissions": 40
+      },
+      {
+        "difficulty": "Medium",
+        "count": 23,
+        "submissions": 25
+      },
+      {
+        "difficulty": "Hard",
+        "count": 3,
+        "submissions": 5
+      }
+    ]
+  },
+  "profile": {
+    "ranking": 2676427,
+    "reputation": 0
+  },
+  "ranking": 2676427,
+  "reputation": 0,
+  "calendar": {
+    "activeYears": [
+      2026
+    ],
+    "streak": 6,
+    "totalActiveDays": 36,
+    "submissionCalendar": "{\"1770854400\": 2, \"1772496000\": 2, \"1773360000\": 3, \"1773446400\": 4, \"1773532800\": 1, \"1774224000\": 2, \"1774310400\": 1, \"1777075200\": 1, \"1779580800\": 3, \"1780963200\": 3, \"1781136000\": 2, \"1782432000\": 5, \"1782518400\": 1, \"1782864000\": 1, \"1785974400\": 2, \"1787616000\": 1, \"1788825600\": 7, \"1788912000\": 3, \"1788998400\": 6, \"1789430400\": 1, \"1789516800\": 1, \"1789603200\": 2, \"1789776000\": 6, \"1790035200\": 2, \"1790380800\": 2, \"1790726400\": 2, \"1790812800\": 1, \"1790899200\": 17, \"1790985600\": 2, \"1791072000\": 4, \"1791590400\": 1, \"1791676800\": 1, \"1791763200\": 1, \"1791849600\": 1, \"1791936000\": 1, \"1792022400\": 1}"
+  },
+  "recentAccepted": [
+    {
+      "title": "Subarrays Distinct Element Sum of Squares I",
+      "titleSlug": "subarrays-distinct-element-sum-of-squares-i",
+      "timestamp": "1792078552"
+    },
+    {
+      "title": "Maximize Sum of Squares of Digits",
+      "titleSlug": "maximize-sum-of-squares-of-digits",
+      "timestamp": "1791999558"
+    },
+    {
+      "title": "Maximum Alternating Sum of Squares",
+      "titleSlug": "maximum-alternating-sum-of-squares",
+      "timestamp": "1791912175"
+    },
+    {
+      "title": "Apply Operations on Array to Maximize Sum of Squares",
+      "titleSlug": "apply-operations-on-array-to-maximize-sum-of-squares",
+      "timestamp": "1791812171"
+    },
+    {
+      "title": "Sum of Squares of Special Elements ",
+      "titleSlug": "sum-of-squares-of-special-elements",
+      "timestamp": "1791740271"
+    },
+    {
+      "title": "Reverse Words in a String",
+      "titleSlug": "reverse-words-in-a-string",
+      "timestamp": "1791109839"
+    },
+    {
+      "title": "Isomorphic Strings",
+      "titleSlug": "isomorphic-strings",
+      "timestamp": "1791107937"
+    },
+    {
+      "title": "Daily Temperatures",
+      "titleSlug": "daily-temperatures",
+      "timestamp": "1791083820"
+    },
+    {
+      "title": "Valid Parentheses",
+      "titleSlug": "valid-parentheses",
+      "timestamp": "1791083385"
+    },
+    {
+      "title": "Next Greater Element II",
+      "titleSlug": "next-greater-element-ii",
+      "timestamp": "1791049333"
+    },
+    {
+      "title": "Next Greater Element I",
+      "titleSlug": "next-greater-element-i",
+      "timestamp": "1791039054"
+    },
+    {
+      "title": "Plus One",
+      "titleSlug": "plus-one",
+      "timestamp": "1790932059"
+    },
+    {
+      "title": "Sort Colors",
+      "titleSlug": "sort-colors",
+      "timestamp": "1790926367"
+    },
+    {
+      "title": "Intersection of Two Arrays",
+      "titleSlug": "intersection-of-two-arrays",
+      "timestamp": "1790925071"
+    },
+    {
+      "title": "Missing Number",
+      "titleSlug": "missing-number",
+      "timestamp": "1790923749"
+    }
+  ],
+  "lastSynced": "2026-10-17T14:21:49Z"
+}
