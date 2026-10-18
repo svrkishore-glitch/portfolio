@@ -4,12 +4,12 @@
       "name": "portfolio",
       "description": null,
       "html_url": "https://github.com/svrkishore-glitch/portfolio",
-      "homepage": null,
+      "homepage": "https://portfolio-plum-mu-64.vercel.app",
       "language": "HTML",
       "topics": [],
       "stargazers_count": 0,
-      "updated_at": "2026-10-18T00:43:23Z",
-      "pushed_at": "2026-10-18T00:43:20Z"
+      "updated_at": "2026-10-18T00:46:22Z",
+      "pushed_at": "2026-10-18T00:43:34Z"
     },
     {
       "name": "SMART-FINANCE-",
@@ -166,5 +166,5 @@
       "pushed_at": "2026-06-11T04:04:51Z"
     }
   ],
-  "lastSynced": "2026-10-18T00:43:32Z"
+  "lastSynced": "2026-10-18T05:11:09Z"
 }
