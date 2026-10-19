@@ -8,8 +8,11 @@
       "language": "HTML",
       "topics": [],
       "stargazers_count": 0,
-      "updated_at": "2026-10-19T06:43:14Z",
-      "pushed_at": "2026-10-19T06:43:10Z"
+      "updated_at": "2026-10-19T17:32:35Z",
+      "pushed_at": "2026-10-19T17:32:31Z",
+      "overview": "A static, single-page portfolio with no build step or runtime dependencies.",
+      "readmeSha": "213642da98439e24fb7c74d5dd8813a551b1be15",
+      "readmePushedAt": "2026-10-19T17:32:31Z"
     },
     {
       "name": "SMART-FINANCE-",
@@ -20,7 +23,10 @@
       "topics": [],
       "stargazers_count": 1,
       "updated_at": "2026-10-14T11:03:41Z",
-      "pushed_at": "2026-10-14T11:03:35Z"
+      "pushed_at": "2026-10-14T11:03:35Z",
+      "overview": "SmartFinance is an elite, SQL-first personal finance ecosystem designed specifically for Indian college students, freelancers, and young professionals. It's…",
+      "readmeSha": "8e9936396fba0d4291ea58ecae699f5a8a3d88df",
+      "readmePushedAt": "2026-10-14T11:03:35Z"
     },
     {
       "name": "landslide-monitoring-prototype",
@@ -31,7 +37,10 @@
       "topics": [],
       "stargazers_count": 0,
       "updated_at": "2026-10-14T10:41:55Z",
-      "pushed_at": "2026-10-14T10:41:52Z"
+      "pushed_at": "2026-10-14T10:41:52Z",
+      "overview": "SIH Problem Statement 206 — “AI-Based Early Warning and Landslide Risk Monitoring System in NER.”",
+      "readmeSha": "cc8dfa7356bd7a5fe5a1a436696fa9c5cf3efe7d",
+      "readmePushedAt": "2026-10-14T10:41:52Z"
     },
     {
       "name": "agradvisor",
@@ -42,7 +51,10 @@
       "topics": [],
       "stargazers_count": 0,
       "updated_at": "2026-08-27T07:10:59Z",
-      "pushed_at": "2026-08-27T07:10:59Z"
+      "pushed_at": "2026-08-27T07:10:59Z",
+      "overview": "",
+      "readmeSha": null,
+      "readmePushedAt": "2026-08-27T07:10:59Z"
     },
     {
       "name": "restaurant-ordering-admin-dashboard-prototype-",
@@ -53,7 +65,10 @@
       "topics": [],
       "stargazers_count": 0,
       "updated_at": "2026-06-23T10:11:40Z",
-      "pushed_at": "2026-06-23T09:41:41Z"
+      "pushed_at": "2026-06-23T09:41:41Z",
+      "overview": "Hunger Bites is a modern, high-performance, and visually stunning Next.js restaurant ordering platform and administrative dashboard. Built with a premium…",
+      "readmeSha": "b474449fb14e1912b33549f954ba165403cb52e5",
+      "readmePushedAt": "2026-06-23T09:41:41Z"
     },
     {
       "name": "streamlit-2",
@@ -64,7 +79,10 @@
       "topics": [],
       "stargazers_count": 0,
       "updated_at": "2026-06-15T04:15:30Z",
-      "pushed_at": "2026-06-15T04:15:25Z"
+      "pushed_at": "2026-06-15T04:15:25Z",
+      "overview": "",
+      "readmeSha": null,
+      "readmePushedAt": "2026-06-15T04:15:25Z"
     },
     {
       "name": "AI-News-Automation-Workflow-n8n-Gemini-",
@@ -75,7 +93,10 @@
       "topics": [],
       "stargazers_count": 0,
       "updated_at": "2026-06-13T13:19:54Z",
-      "pushed_at": "2026-06-13T13:19:50Z"
+      "pushed_at": "2026-06-13T13:19:50Z",
+      "overview": "Schedule Trigger ↓ RSS Feed (AI Business) ↓ RSS Feed (TechCrunch) ↓ Merge News Data ↓ Aggregate Content ↓ Google Gemini AI ↓ Email Notification (Gmail)",
+      "readmeSha": "2e12da80088fb6db4077c6ad85bbbcd381554379",
+      "readmePushedAt": "2026-06-13T13:19:50Z"
     },
     {
       "name": "learning-hub",
@@ -86,7 +107,10 @@
       "topics": [],
       "stargazers_count": 1,
       "updated_at": "2026-06-13T11:33:08Z",
-      "pushed_at": "2025-11-21T04:34:02Z"
+      "pushed_at": "2025-11-21T04:34:02Z",
+      "overview": "",
+      "readmeSha": null,
+      "readmePushedAt": "2025-11-21T04:34:02Z"
     },
     {
       "name": "laptop_control",
@@ -97,7 +121,10 @@
       "topics": [],
       "stargazers_count": 1,
       "updated_at": "2026-06-13T11:33:07Z",
-      "pushed_at": "2026-03-21T13:19:47Z"
+      "pushed_at": "2026-03-21T13:19:47Z",
+      "overview": "",
+      "readmeSha": "d27256b46e6abfc936ee571176d1eb6cc7acb992",
+      "readmePushedAt": "2026-03-21T13:19:47Z"
     },
     {
       "name": "ClamIQ",
@@ -108,7 +135,10 @@
       "topics": [],
       "stargazers_count": 1,
       "updated_at": "2026-06-13T11:33:06Z",
-      "pushed_at": "2026-04-14T07:45:44Z"
+      "pushed_at": "2026-04-14T07:45:44Z",
+      "overview": "",
+      "readmeSha": null,
+      "readmePushedAt": "2026-04-14T07:45:44Z"
     },
     {
       "name": "-CultureFit-AI",
@@ -119,7 +149,10 @@
       "topics": [],
       "stargazers_count": 1,
       "updated_at": "2026-06-13T11:33:04Z",
-      "pushed_at": "2026-04-23T16:25:57Z"
+      "pushed_at": "2026-04-23T16:25:57Z",
+      "overview": "",
+      "readmeSha": "f55e6b8962125bb890fb5aece6332f746a35fde4",
+      "readmePushedAt": "2026-04-23T16:25:57Z"
     },
     {
       "name": "Physics_project",
@@ -130,7 +163,10 @@
       "topics": [],
       "stargazers_count": 1,
       "updated_at": "2026-06-13T11:33:03Z",
-      "pushed_at": "2026-05-08T09:42:50Z"
+      "pushed_at": "2026-05-08T09:42:50Z",
+      "overview": "",
+      "readmeSha": null,
+      "readmePushedAt": "2026-05-08T09:42:50Z"
     },
     {
       "name": "Go-Yatri",
@@ -141,7 +177,10 @@
       "topics": [],
       "stargazers_count": 1,
       "updated_at": "2026-06-13T11:33:02Z",
-      "pushed_at": "2026-05-26T13:11:17Z"
+      "pushed_at": "2026-05-26T13:11:17Z",
+      "overview": "",
+      "readmeSha": null,
+      "readmePushedAt": "2026-05-26T13:11:17Z"
     },
     {
       "name": "role-based-ai-assistante-prototype",
@@ -152,7 +191,10 @@
       "topics": [],
       "stargazers_count": 1,
       "updated_at": "2026-06-13T11:33:01Z",
-      "pushed_at": "2026-05-31T16:46:49Z"
+      "pushed_at": "2026-05-31T16:46:49Z",
+      "overview": "",
+      "readmeSha": null,
+      "readmePushedAt": "2026-05-31T16:46:49Z"
     },
     {
       "name": "streamlit",
@@ -163,8 +205,11 @@
       "topics": [],
       "stargazers_count": 0,
       "updated_at": "2026-06-11T04:04:55Z",
-      "pushed_at": "2026-06-11T04:04:51Z"
+      "pushed_at": "2026-06-11T04:04:51Z",
+      "overview": "",
+      "readmeSha": null,
+      "readmePushedAt": "2026-06-11T04:04:51Z"
     }
   ],
-  "lastSynced": "2026-10-19T14:00:36Z"
+  "lastSynced": "2026-10-19T17:32:42Z"
 }
