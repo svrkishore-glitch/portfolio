@@ -2,7 +2,10 @@
 """Fetch public portfolio data. Writes each destination only after a valid response."""
 from datetime import datetime, timezone
 from pathlib import Path
+from base64 import b64decode
 import argparse, json, os, re, sys, urllib.error, urllib.request
+from html import unescape
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
@@ -27,6 +30,82 @@ def save(name, payload):
     temp.replace(path)
     print(f"Updated {path.relative_to(ROOT)}")
 
+def readme_overview(markdown):
+    """Return the first useful prose paragraph from a README, capped at 160 chars."""
+    paragraphs, list_items = [], []
+    current, current_is_list = [], False
+    in_fence = False
+
+    def flush():
+        nonlocal current, current_is_list
+        if current:
+            text = " ".join(current).strip()
+            if current_is_list:
+                list_items.append(text)
+            else:
+                paragraphs.append(text)
+        current, current_is_list = [], False
+
+    for raw_line in markdown.splitlines():
+        line = raw_line.strip()
+        if line.startswith(("```", "~~~")):
+            flush()
+            in_fence = not in_fence
+            continue
+        if in_fence:
+            continue
+        if not line or line.startswith("#") or "![" in line or "shields.io" in line:
+            flush()
+            continue
+        if re.fullmatch(r"(?:[-*_]\s*){3,}", line):
+            flush()
+            continue
+
+        line = re.sub(r"<br\s*/?>", " ", line, flags=re.I)
+        line = re.sub(r"<[^>]*>", " ", line)
+        line = unescape(line).strip()
+        line = re.sub(r"^>\s*", "", line)
+        is_list = bool(re.match(r"^(?:[-*+]\s+|\d+[.)]\s+)", line))
+        if is_list:
+            line = re.sub(r"^(?:[-*+]\s+|\d+[.)]\s+)", "", line)
+        if not line or line.startswith("|"):
+            flush()
+            continue
+        if current and current_is_list != is_list:
+            flush()
+        current_is_list = is_list
+        current.append(line)
+    flush()
+
+    def clean(text):
+        text = re.sub(r"!\[[^\]]*\]\([^)]*\)", " ", text)
+        text = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", text)
+        text = re.sub(r"\[([^\]]+)\]\[[^\]]*\]", r"\1", text)
+        text = re.sub(r"`+([^`]+)`+", r"\1", text)
+        text = re.sub(r"(?:\*\*|__|~~|\*|_)", "", text)
+        text = re.sub(r"<[^>]*>", " ", text)
+        return re.sub(r"\s+", " ", unescape(text)).strip()
+
+    for paragraph in paragraphs:
+        text = clean(paragraph)
+        if len(text) >= 40:
+            return shorten_overview(text)
+
+    # Lists are a last resort; ordinary prose always takes precedence.
+    candidates = [clean(item) for item in list_items]
+    for text in candidates:
+        if len(text) >= 40 and not re.match(r"(?i)^(?:install|installation|npm\s|pnpm\s|yarn\s|bun\s|pip\s|git clone|docker\s)", text):
+            return shorten_overview(text)
+    return shorten_overview(candidates[0]) if candidates and candidates[0] else ""
+
+def shorten_overview(text):
+    if len(text) <= 160:
+        return text
+    shortened = text[:159]
+    if " " in shortened:
+        shortened = shortened.rsplit(" ", 1)[0]
+    return shortened.rstrip(" ,;:-") + "…"
+
 def sync_github():
     headers = {}
     token = os.getenv("GITHUB_TOKEN")
@@ -34,7 +113,57 @@ def sync_github():
     raw = request(f"https://api.github.com/users/{GITHUB_USER}/repos?sort=updated&per_page=100", headers)
     repos = json.loads(raw)
     if not isinstance(repos, list): raise ValueError("GitHub response was not a repository list")
-    save("github.json", {"repos": [{k: r.get(k) for k in ("name", "description", "html_url", "homepage", "language", "topics", "stargazers_count", "updated_at", "pushed_at")} for r in repos]})
+    cache = {}
+    try:
+        previous = json.loads((DATA / "github.json").read_text(encoding="utf-8"))
+        previous_repos = previous if isinstance(previous, list) else previous.get("repos", [])
+        cache = {str(r.get("name", "")).casefold(): r for r in previous_repos if isinstance(r, dict)}
+    except (OSError, ValueError, TypeError):
+        pass
+
+    synced_repos = []
+    for repo in repos:
+        item = {k: repo.get(k) for k in ("name", "description", "html_url", "homepage", "language", "topics", "stargazers_count", "updated_at", "pushed_at")}
+        name = str(repo.get("name", ""))
+        old = cache.get(name.casefold(), {})
+        pushed_at = repo.get("pushed_at")
+        overview = old.get("overview", "")
+        readme_sha = old.get("readmeSha")
+        readme_pushed_at = old.get("readmePushedAt")
+
+        # The repo-list endpoint has pushed_at, not a README blob SHA. Use it to
+        # avoid README requests on unchanged repositories, then compare the actual
+        # README SHA when a repository has changed.
+        if not (pushed_at and readme_pushed_at == pushed_at and "overview" in old):
+            url = f"https://api.github.com/repos/{quote(GITHUB_USER, safe='')}/{quote(name, safe='')}/readme"
+            try:
+                readme = json.loads(request(url, headers))
+                new_sha = readme.get("sha")
+                if new_sha and new_sha == readme_sha:
+                    overview = old.get("overview", "")
+                else:
+                    content = readme.get("content", "")
+                    if readme.get("encoding") == "base64" and content:
+                        markdown = b64decode(content).decode("utf-8", "replace")
+                        overview = readme_overview(markdown)
+                    else:
+                        overview = ""
+                readme_sha = new_sha or readme_sha
+                readme_pushed_at = pushed_at
+            except urllib.error.HTTPError as exc:
+                if exc.code == 404:
+                    # Cache a confirmed missing README until the next repository push.
+                    readme_pushed_at = pushed_at
+                print(f"README sync skipped for {name}: {exc}", file=sys.stderr)
+            except Exception as exc:
+                # Keep the last good overview and retry on the next scheduled run.
+                print(f"README sync skipped for {name}: {exc}", file=sys.stderr)
+
+        item["overview"] = overview
+        item["readmeSha"] = readme_sha
+        item["readmePushedAt"] = readme_pushed_at
+        synced_repos.append(item)
+    save("github.json", {"repos": synced_repos})
 
 def sync_leetcode():
     year = datetime.now(timezone.utc).year
