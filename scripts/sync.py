@@ -106,6 +106,35 @@ def shorten_overview(text):
         shortened = shortened.rsplit(" ", 1)[0]
     return shortened.rstrip(" ,;:-") + "…"
 
+def curated_sync_summary(current_repo_names):
+    """Read curated repo mapping from the page so sync logs match its config."""
+    try:
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+    except OSError:
+        return [], []
+    block = re.search(r"const\s+curated\s*=\s*\[(.*?)\]\s*;", html, re.S)
+    if not block:
+        return [], []
+
+    current = {re.sub(r"[^a-z0-9]", "", str(name).casefold()) for name in current_repo_names}
+    matched, hidden = [], []
+    for raw in re.findall(r"\{([^{}]*)\}", block.group(1)):
+        name_match = re.search(r"\bname\s*:\s*'([^']*)'", raw)
+        if not name_match:
+            continue
+        name = name_match.group(1)
+        repo_match = re.search(r"\brepo\s*:\s*'([^']*)'", raw)
+        repo = repo_match.group(1).strip() if repo_match else name.strip()
+        always = bool(re.search(r"\balwaysShow\s*:\s*true\b", raw))
+        key = re.sub(r"[^a-z0-9]", "", repo.casefold())
+        if key and key in current:
+            matched.append(f"{name} -> {repo}")
+        elif always:
+            matched.append(f"{name} (alwaysShow)")
+        else:
+            hidden.append(f"{name} -> {repo or '(no repo)'}")
+    return matched, hidden
+
 def sync_github():
     headers = {}
     token = os.getenv("GITHUB_TOKEN")
@@ -122,13 +151,23 @@ def sync_github():
         pass
 
     synced_repos = []
+    excluded = {"fork": [], "archived": [], "portfolio-hidden": [], "private": []}
     for repo in repos:
         if not isinstance(repo, dict):
             continue
         topics = repo.get("topics") or []
-        if repo.get("fork") or repo.get("archived") or repo.get("private"):
-            continue
+        reasons = []
+        if repo.get("fork"):
+            reasons.append("fork")
+        if repo.get("archived"):
+            reasons.append("archived")
+        if repo.get("private"):
+            reasons.append("private")
         if any(str(topic).casefold() == "portfolio-hidden" for topic in topics):
+            reasons.append("portfolio-hidden")
+        for reason in reasons:
+            excluded[reason].append(str(repo.get("name") or "(unnamed repo)"))
+        if reasons:
             continue
 
         item = {k: repo.get(k) for k in ("name", "description", "html_url", "homepage", "language", "topics", "stargazers_count", "updated_at", "pushed_at")}
@@ -170,13 +209,18 @@ def sync_github():
         item["overview"] = overview
         item["readmeSha"] = readme_sha
         item["readmePushedAt"] = readme_pushed_at
-        if not (str(item.get("description") or "").strip() or str(overview or "").strip()):
-            continue
         synced_repos.append(item)
 
     # The API response is authoritative. Only cached README metadata for repos
     # still present in this successful response is copied into the new file.
     save("github.json", {"repos": synced_repos})
+    print(f"GitHub repos returned: {len(repos)}")
+    for reason, names in excluded.items():
+        print(f"Excluded ({reason}): {len(names)}" + (f" — {', '.join(names)}" if names else ""))
+    print(f"GitHub repos written: {len(synced_repos)}")
+    matched, hidden = curated_sync_summary(item.get("name", "") for item in synced_repos)
+    print(f"Curated entries matched: {', '.join(matched) if matched else 'none'}")
+    print(f"Curated entries hidden: {', '.join(hidden) if hidden else 'none'}")
 
 def sync_leetcode():
     year = datetime.now(timezone.utc).year
