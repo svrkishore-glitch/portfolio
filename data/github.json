@@ -8,11 +8,11 @@
       "language": "HTML",
       "topics": [],
       "stargazers_count": 0,
-      "updated_at": "2026-10-19T17:32:35Z",
-      "pushed_at": "2026-10-19T17:32:31Z",
+      "updated_at": "2026-10-19T17:43:26Z",
+      "pushed_at": "2026-10-19T17:43:22Z",
       "overview": "A static, single-page portfolio with no build step or runtime dependencies.",
       "readmeSha": "213642da98439e24fb7c74d5dd8813a551b1be15",
-      "readmePushedAt": "2026-10-19T17:32:31Z"
+      "readmePushedAt": "2026-10-19T17:43:22Z"
     },
     {
       "name": "SMART-FINANCE-",
@@ -43,20 +43,6 @@
       "readmePushedAt": "2026-10-14T10:41:52Z"
     },
     {
-      "name": "agradvisor",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/agradvisor",
-      "homepage": null,
-      "language": null,
-      "topics": [],
-      "stargazers_count": 0,
-      "updated_at": "2026-08-27T07:10:59Z",
-      "pushed_at": "2026-08-27T07:10:59Z",
-      "overview": "",
-      "readmeSha": null,
-      "readmePushedAt": "2026-08-27T07:10:59Z"
-    },
-    {
       "name": "restaurant-ordering-admin-dashboard-prototype-",
       "description": null,
       "html_url": "https://github.com/svrkishore-glitch/restaurant-ordering-admin-dashboard-prototype-",
@@ -71,20 +57,6 @@
       "readmePushedAt": "2026-06-23T09:41:41Z"
     },
     {
-      "name": "streamlit-2",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/streamlit-2",
-      "homepage": null,
-      "language": "Python",
-      "topics": [],
-      "stargazers_count": 0,
-      "updated_at": "2026-06-15T04:15:30Z",
-      "pushed_at": "2026-06-15T04:15:25Z",
-      "overview": "",
-      "readmeSha": null,
-      "readmePushedAt": "2026-06-15T04:15:25Z"
-    },
-    {
       "name": "AI-News-Automation-Workflow-n8n-Gemini-",
       "description": null,
       "html_url": "https://github.com/svrkishore-glitch/AI-News-Automation-Workflow-n8n-Gemini-",
@@ -97,119 +69,7 @@
       "overview": "Schedule Trigger ↓ RSS Feed (AI Business) ↓ RSS Feed (TechCrunch) ↓ Merge News Data ↓ Aggregate Content ↓ Google Gemini AI ↓ Email Notification (Gmail)",
       "readmeSha": "2e12da80088fb6db4077c6ad85bbbcd381554379",
       "readmePushedAt": "2026-06-13T13:19:50Z"
-    },
-    {
-      "name": "learning-hub",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/learning-hub",
-      "homepage": null,
-      "language": "HTML",
-      "topics": [],
-      "stargazers_count": 1,
-      "updated_at": "2026-06-13T11:33:08Z",
-      "pushed_at": "2025-11-21T04:34:02Z",
-      "overview": "",
-      "readmeSha": null,
-      "readmePushedAt": "2025-11-21T04:34:02Z"
-    },
-    {
-      "name": "laptop_control",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/laptop_control",
-      "homepage": null,
-      "language": "HTML",
-      "topics": [],
-      "stargazers_count": 1,
-      "updated_at": "2026-06-13T11:33:07Z",
-      "pushed_at": "2026-03-21T13:19:47Z",
-      "overview": "",
-      "readmeSha": "d27256b46e6abfc936ee571176d1eb6cc7acb992",
-      "readmePushedAt": "2026-03-21T13:19:47Z"
-    },
-    {
-      "name": "ClamIQ",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/ClamIQ",
-      "homepage": null,
-      "language": "HTML",
-      "topics": [],
-      "stargazers_count": 1,
-      "updated_at": "2026-06-13T11:33:06Z",
-      "pushed_at": "2026-04-14T07:45:44Z",
-      "overview": "",
-      "readmeSha": null,
-      "readmePushedAt": "2026-04-14T07:45:44Z"
-    },
-    {
-      "name": "-CultureFit-AI",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/-CultureFit-AI",
-      "homepage": null,
-      "language": "Python",
-      "topics": [],
-      "stargazers_count": 1,
-      "updated_at": "2026-06-13T11:33:04Z",
-      "pushed_at": "2026-04-23T16:25:57Z",
-      "overview": "",
-      "readmeSha": "f55e6b8962125bb890fb5aece6332f746a35fde4",
-      "readmePushedAt": "2026-04-23T16:25:57Z"
-    },
-    {
-      "name": "Physics_project",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/Physics_project",
-      "homepage": null,
-      "language": "HTML",
-      "topics": [],
-      "stargazers_count": 1,
-      "updated_at": "2026-06-13T11:33:03Z",
-      "pushed_at": "2026-05-08T09:42:50Z",
-      "overview": "",
-      "readmeSha": null,
-      "readmePushedAt": "2026-05-08T09:42:50Z"
-    },
-    {
-      "name": "Go-Yatri",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/Go-Yatri",
-      "homepage": null,
-      "language": null,
-      "topics": [],
-      "stargazers_count": 1,
-      "updated_at": "2026-06-13T11:33:02Z",
-      "pushed_at": "2026-05-26T13:11:17Z",
-      "overview": "",
-      "readmeSha": null,
-      "readmePushedAt": "2026-05-26T13:11:17Z"
-    },
-    {
-      "name": "role-based-ai-assistante-prototype",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/role-based-ai-assistante-prototype",
-      "homepage": "https://role-based-ai-assistante-prototype.vercel.app",
-      "language": "TypeScript",
-      "topics": [],
-      "stargazers_count": 1,
-      "updated_at": "2026-06-13T11:33:01Z",
-      "pushed_at": "2026-05-31T16:46:49Z",
-      "overview": "",
-      "readmeSha": null,
-      "readmePushedAt": "2026-05-31T16:46:49Z"
-    },
-    {
-      "name": "streamlit",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/streamlit",
-      "homepage": null,
-      "language": "Python",
-      "topics": [],
-      "stargazers_count": 0,
-      "updated_at": "2026-06-11T04:04:55Z",
-      "pushed_at": "2026-06-11T04:04:51Z",
-      "overview": "",
-      "readmeSha": null,
-      "readmePushedAt": "2026-06-11T04:04:51Z"
     }
   ],
-  "lastSynced": "2026-10-19T17:32:42Z"
+  "lastSynced": "2026-10-19T17:43:32Z"
 }
