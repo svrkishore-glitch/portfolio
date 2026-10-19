@@ -110,7 +110,7 @@ def sync_github():
     headers = {}
     token = os.getenv("GITHUB_TOKEN")
     if token: headers["Authorization"] = f"Bearer {token}"
-    raw = request(f"https://api.github.com/users/{GITHUB_USER}/repos?sort=updated&per_page=100", headers)
+    raw = request(f"https://api.github.com/users/{GITHUB_USER}/repos?type=public&sort=updated&per_page=100", headers)
     repos = json.loads(raw)
     if not isinstance(repos, list): raise ValueError("GitHub response was not a repository list")
     cache = {}
@@ -123,6 +123,14 @@ def sync_github():
 
     synced_repos = []
     for repo in repos:
+        if not isinstance(repo, dict):
+            continue
+        topics = repo.get("topics") or []
+        if repo.get("fork") or repo.get("archived") or repo.get("private"):
+            continue
+        if any(str(topic).casefold() == "portfolio-hidden" for topic in topics):
+            continue
+
         item = {k: repo.get(k) for k in ("name", "description", "html_url", "homepage", "language", "topics", "stargazers_count", "updated_at", "pushed_at")}
         name = str(repo.get("name", ""))
         old = cache.get(name.casefold(), {})
@@ -162,7 +170,12 @@ def sync_github():
         item["overview"] = overview
         item["readmeSha"] = readme_sha
         item["readmePushedAt"] = readme_pushed_at
+        if not (str(item.get("description") or "").strip() or str(overview or "").strip()):
+            continue
         synced_repos.append(item)
+
+    # The API response is authoritative. Only cached README metadata for repos
+    # still present in this successful response is copied into the new file.
     save("github.json", {"repos": synced_repos})
 
 def sync_leetcode():
