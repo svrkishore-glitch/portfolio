@@ -4,18 +4,18 @@
     "acSubmissionNum": [
       {
         "difficulty": "All",
-        "count": 63,
-        "submissions": 83
+        "count": 66,
+        "submissions": 86
       },
       {
         "difficulty": "Easy",
-        "count": 32,
-        "submissions": 48
+        "count": 33,
+        "submissions": 49
       },
       {
         "difficulty": "Medium",
-        "count": 26,
-        "submissions": 28
+        "count": 28,
+        "submissions": 30
       },
       {
         "difficulty": "Hard",
@@ -34,11 +34,26 @@
     "activeYears": [
       2026
     ],
-    "streak": 7,
-    "totalActiveDays": 43,
-    "submissionCalendar": "{\"1770854400\": 2, \"1772496000\": 2, \"1773360000\": 3, \"1773446400\": 4, \"1773532800\": 1, \"1774224000\": 2, \"1774310400\": 1, \"1777075200\": 1, \"1779580800\": 3, \"1780963200\": 3, \"1781136000\": 2, \"1782432000\": 5, \"1782518400\": 1, \"1782864000\": 1, \"1785974400\": 2, \"1787616000\": 1, \"1788825600\": 7, \"1788912000\": 3, \"1788998400\": 6, \"1789430400\": 1, \"1789516800\": 1, \"1789603200\": 2, \"1789776000\": 6, \"1790035200\": 2, \"1790380800\": 2, \"1790726400\": 2, \"1790812800\": 1, \"1790899200\": 17, \"1790985600\": 2, \"1791072000\": 4, \"1791590400\": 1, \"1791676800\": 1, \"1791763200\": 1, \"1791849600\": 1, \"1791936000\": 1, \"1792022400\": 1, \"1792281600\": 8, \"1792368000\": 3, \"1792454400\": 4, \"1792540800\": 2, \"1792627200\": 1, \"1792713600\": 1, \"1792800000\": 1}"
+    "streak": 8,
+    "totalActiveDays": 44,
+    "submissionCalendar": "{\"1770854400\": 2, \"1772496000\": 2, \"1773360000\": 3, \"1773446400\": 4, \"1773532800\": 1, \"1774224000\": 2, \"1774310400\": 1, \"1777075200\": 1, \"1779580800\": 3, \"1780963200\": 3, \"1781136000\": 2, \"1782432000\": 5, \"1782518400\": 1, \"1782864000\": 1, \"1785974400\": 2, \"1787616000\": 1, \"1788825600\": 7, \"1788912000\": 3, \"1788998400\": 6, \"1789430400\": 1, \"1789516800\": 1, \"1789603200\": 2, \"1789776000\": 6, \"1790035200\": 2, \"1790380800\": 2, \"1790726400\": 2, \"1790812800\": 1, \"1790899200\": 17, \"1790985600\": 2, \"1791072000\": 4, \"1791590400\": 1, \"1791676800\": 1, \"1791763200\": 1, \"1791849600\": 1, \"1791936000\": 1, \"1792022400\": 1, \"1792281600\": 8, \"1792368000\": 3, \"1792454400\": 4, \"1792540800\": 2, \"1792627200\": 1, \"1792713600\": 1, \"1792800000\": 1, \"1792886400\": 5}"
   },
   "recentAccepted": [
+    {
+      "title": "Count Frequency Staircase Subarrays I",
+      "titleSlug": "count-frequency-staircase-subarrays-i",
+      "timestamp": "1792899480"
+    },
+    {
+      "title": "Maximize Sum After At Most K Digit Rearrangements",
+      "titleSlug": "maximize-sum-after-at-most-k-digit-rearrangements",
+      "timestamp": "1792898834"
+    },
+    {
+      "title": "Binary Digit Score",
+      "titleSlug": "binary-digit-score",
+      "timestamp": "1792898372"
+    },
     {
       "title": "Count Days Spent Together",
       "titleSlug": "count-days-spent-together",
@@ -98,22 +113,7 @@
       "title": "Contains Duplicate",
       "titleSlug": "contains-duplicate",
       "timestamp": "1792329952"
-    },
-    {
-      "title": "Number of Ways to Reorder Array to Get Same BST",
-      "titleSlug": "number-of-ways-to-reorder-array-to-get-same-bst",
-      "timestamp": "1792315157"
-    },
-    {
-      "title": "Subarrays Distinct Element Sum of Squares I",
-      "titleSlug": "subarrays-distinct-element-sum-of-squares-i",
-      "timestamp": "1792078552"
-    },
-    {
-      "title": "Maximize Sum of Squares of Digits",
-      "titleSlug": "maximize-sum-of-squares-of-digits",
-      "timestamp": "1791999558"
     }
   ],
-  "lastSynced": "2026-10-25T01:42:04Z"
+  "lastSynced": "2026-10-25T06:55:31Z"
 }
