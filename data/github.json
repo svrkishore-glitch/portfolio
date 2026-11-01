@@ -1,6 +1,20 @@
 {
   "repos": [
     {
+      "name": "portfolio",
+      "description": null,
+      "html_url": "https://github.com/svrkishore-glitch/portfolio",
+      "homepage": "https://portfolio-plum-mu-64.vercel.app",
+      "language": "HTML",
+      "topics": [],
+      "stargazers_count": 0,
+      "updated_at": "2026-11-01T19:27:31Z",
+      "pushed_at": "2026-11-01T19:27:27Z",
+      "overview": "A static, single-page portfolio with no build step or runtime dependencies.",
+      "readmeSha": "213642da98439e24fb7c74d5dd8813a551b1be15",
+      "readmePushedAt": "2026-11-01T19:27:27Z"
+    },
+    {
       "name": "backend_lab",
       "description": null,
       "html_url": "https://github.com/svrkishore-glitch/backend_lab",
@@ -13,20 +27,6 @@
       "overview": "",
       "readmeSha": null,
       "readmePushedAt": "2026-11-01T17:31:24Z"
-    },
-    {
-      "name": "portfolio",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/portfolio",
-      "homepage": "https://portfolio-plum-mu-64.vercel.app",
-      "language": "HTML",
-      "topics": [],
-      "stargazers_count": 0,
-      "updated_at": "2026-11-01T14:53:34Z",
-      "pushed_at": "2026-11-01T14:53:31Z",
-      "overview": "A static, single-page portfolio with no build step or runtime dependencies.",
-      "readmeSha": "213642da98439e24fb7c74d5dd8813a551b1be15",
-      "readmePushedAt": "2026-11-01T14:53:31Z"
     },
     {
       "name": "Backend-Development-Fundamentals",
@@ -239,5 +239,5 @@
       "readmePushedAt": "2026-06-11T04:04:51Z"
     }
   ],
-  "lastSynced": "2026-11-01T19:27:25Z"
+  "lastSynced": "2026-11-01T22:58:39Z"
 }
