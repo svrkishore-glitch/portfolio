@@ -1,6 +1,20 @@
 {
   "repos": [
     {
+      "name": "backend_lab",
+      "description": null,
+      "html_url": "https://github.com/svrkishore-glitch/backend_lab",
+      "homepage": null,
+      "language": "JavaScript",
+      "topics": [],
+      "stargazers_count": 0,
+      "updated_at": "2026-11-09T04:57:49Z",
+      "pushed_at": "2026-11-09T04:57:45Z",
+      "overview": "",
+      "readmeSha": null,
+      "readmePushedAt": "2026-11-09T04:57:45Z"
+    },
+    {
       "name": "portfolio",
       "description": null,
       "html_url": "https://github.com/svrkishore-glitch/portfolio",
@@ -8,11 +22,11 @@
       "language": "HTML",
       "topics": [],
       "stargazers_count": 0,
-      "updated_at": "2026-11-08T23:48:00Z",
-      "pushed_at": "2026-11-08T23:47:56Z",
+      "updated_at": "2026-11-09T03:01:26Z",
+      "pushed_at": "2026-11-09T03:01:22Z",
       "overview": "A static, single-page portfolio with no build step or runtime dependencies.",
       "readmeSha": "213642da98439e24fb7c74d5dd8813a551b1be15",
-      "readmePushedAt": "2026-11-08T23:47:56Z"
+      "readmePushedAt": "2026-11-09T03:01:22Z"
     },
     {
       "name": "SMART-FINANCE-",
@@ -27,20 +41,6 @@
       "overview": "SmartFinance is an elite, SQL-first personal finance ecosystem designed specifically for Indian college students, freelancers, and young professionals. It's…",
       "readmeSha": "8e9936396fba0d4291ea58ecae699f5a8a3d88df",
       "readmePushedAt": "2026-10-14T11:03:35Z"
-    },
-    {
-      "name": "backend_lab",
-      "description": null,
-      "html_url": "https://github.com/svrkishore-glitch/backend_lab",
-      "homepage": null,
-      "language": "JavaScript",
-      "topics": [],
-      "stargazers_count": 0,
-      "updated_at": "2026-11-06T04:58:28Z",
-      "pushed_at": "2026-11-06T04:58:24Z",
-      "overview": "",
-      "readmeSha": null,
-      "readmePushedAt": "2026-11-06T04:58:24Z"
     },
     {
       "name": "svs-traders",
@@ -225,5 +225,5 @@
       "readmePushedAt": "2026-06-11T04:04:51Z"
     }
   ],
-  "lastSynced": "2026-11-09T03:01:21Z"
+  "lastSynced": "2026-11-09T11:13:38Z"
 }
