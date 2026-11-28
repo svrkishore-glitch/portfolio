@@ -1,0 +1,95 @@
+[
+  {
+    "name": "SpinCycle-Bikes",
+    "repo": "SpinCycle-Bikes",
+    "alwaysShow": true,
+    "badge": "Backend API · Team (Server & Routes)",
+    "description": "Campus bike-sharing REST API with Node.js, Express 5, SQLite, parameterized queries, pagination, conflict checks, and 48 automated tests.",
+    "html_url": "https://github.com/svrkishore-glitch/SpinCycle-Bikes",
+    "topics": ["Node.js", "Express", "SQLite", "REST API"],
+    "outcome": "Owned server.js & routes.js (middleware, routing, 404 & centralized error handling)."
+  },
+  {
+    "name": "LandslideGuard NER",
+    "repo": "landslide-monitoring-prototype",
+    "alwaysShow": true,
+    "badge": "Prototype · Full-Stack",
+    "description": "Northeast India rainfall and slope-monitoring prototype built with React 19, Leaflet, FastAPI, Open-Meteo forecasts, and an optional local vision-model experiment.",
+    "html_url": "https://github.com/svrkishore-glitch/landslide-monitoring-prototype",
+    "topics": ["React", "FastAPI", "Python", "Leaflet"],
+    "outcome": "Honest prototype scoping with fixed-fixture API tests and graceful offline fallback."
+  },
+  {
+    "name": "Developer Portfolio",
+    "repo": "portfolio",
+    "alwaysShow": true,
+    "badge": "Static Web + CI Sync",
+    "description": "Static developer portfolio with zero runtime dependencies, automated GitHub/LeetCode/GFG snapshot syncing, and GitHub Pages CI deployment.",
+    "html_url": "https://github.com/svrkishore-glitch/portfolio",
+    "homepage": "https://svrkishore-glitch.github.io/portfolio/",
+    "topics": ["JavaScript", "HTML/CSS", "Python", "GitHub Actions"],
+    "outcome": "Modularized UI with change-only snapshot sync to prevent empty commit churn."
+  },
+  {
+    "name": "SmartFinance",
+    "repo": "SMART-FINANCE-",
+    "alwaysShow": true,
+    "badge": "Full-Stack · Demo",
+    "description": "Personal finance tracker with Express, SQLite, Chart.js analytics, budget summaries, and optional AI insights using synthetic demo data.",
+    "html_url": "https://github.com/svrkishore-glitch/SMART-FINANCE-",
+    "topics": ["JavaScript", "Node.js", "SQLite", "Chart.js"],
+    "outcome": "Relational SQLite schema with indexed queries, budget tracking, and demo-mode isolation."
+  },
+  {
+    "name": "GoYatri",
+    "repo": "Go-Yatri",
+    "alwaysShow": true,
+    "badge": "Full-Stack · Live Demo",
+    "description": "Multi-mode travel booking app (buses, trains, flights) with interactive seat selection, role-based views, and Firebase Auth/Firestore transactions.",
+    "homepage": "https://goyatri.vercel.app",
+    "html_url": "https://github.com/svrkishore-glitch/Go-Yatri",
+    "topics": ["React", "Firebase", "Zustand", "Tailwind CSS"],
+    "outcome": "Deployed on Vercel with Firestore security rules and transactional seat booking."
+  },
+  {
+    "name": "HR Policy RAG Assistant",
+    "repo": "streamlit-2",
+    "alwaysShow": true,
+    "badge": "AI / RAG · Python",
+    "description": "Document-grounded HR policy Q&A chatbot built with Streamlit, LangChain, Hugging Face embeddings, FAISS vector search, and Groq LLM.",
+    "html_url": "https://github.com/svrkishore-glitch/streamlit-2",
+    "topics": ["Python", "Streamlit", "LangChain", "FAISS"],
+    "outcome": "Deterministic PDF corpus loading with scope classification and source citations."
+  },
+  {
+    "name": "SVS Traders",
+    "repo": "svs-traders",
+    "alwaysShow": true,
+    "badge": "Full-Stack · Business App",
+    "description": "Inventory, billing, and returns management app built with React, Vite, Tailwind CSS, and Supabase.",
+    "html_url": "https://github.com/svrkishore-glitch/svs-traders",
+    "topics": ["React", "Supabase", "Vite", "Tailwind CSS"],
+    "outcome": "Supports stock uploads, invoice generation, and returns workflows."
+  },
+  {
+    "name": "PN-Junction Simulator",
+    "repo": "Physics_project",
+    "alwaysShow": false,
+    "badge": "Interactive Simulation",
+    "description": "Interactive PN-junction semiconductor physics simulator with Canvas plots for depletion width and bias response.",
+    "html_url": "https://github.com/svrkishore-glitch/Physics_project",
+    "topics": ["JavaScript", "HTML/CSS", "Canvas"],
+    "outcome": "Educational quantitative simulation with unit-tested calculations."
+  },
+  {
+    "name": "ClamIQ",
+    "repo": "ClamIQ",
+    "alwaysShow": false,
+    "badge": "Frontend · Live Demo",
+    "description": "Lightweight interactive quiz app with scoring, instant feedback, and optional webcam interaction via face-api.js.",
+    "homepage": "https://svrkishore-glitch.github.io/ClamIQ/",
+    "html_url": "https://github.com/svrkishore-glitch/ClamIQ",
+    "topics": ["JavaScript", "HTML/CSS"],
+    "outcome": "Live on GitHub Pages with clean standalone quiz flow."
+  }
+]

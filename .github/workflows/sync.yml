@@ -1,11 +1,12 @@
 name: Sync portfolio data
 on:
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    - cron: "17 6 * * *"
   workflow_dispatch:
   push:
     paths:
       - "scripts/**"
+      - "data/curated.json"
       - ".github/workflows/sync.yml"
 permissions:
   contents: write
@@ -16,8 +17,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.12"
       - name: Fetch profile data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/sync.py
       - name: Commit updated data
         run: |
@@ -30,4 +33,3 @@ jobs:
           else
             echo "No portfolio data changes"
           fi
-

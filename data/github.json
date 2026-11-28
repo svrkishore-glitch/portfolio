@@ -9,10 +9,10 @@
       "topics": [],
       "stargazers_count": 0,
       "updated_at": "2026-11-15T04:24:13Z",
-      "pushed_at": "2026-11-15T04:24:09Z",
-      "overview": "SpinCycle Bikes is a RESTful backend web service built with Node.js, Express.js, and SQLite to digitize and manage campus bicycle sharing. Developed for…",
-      "readmeSha": "ee1349d90b68be54d30582f5b9f3ed1517d3114d",
-      "readmePushedAt": "2026-11-15T04:24:09Z"
+      "pushed_at": "2026-11-28T09:34:34Z",
+      "overview": "SpinCycle Bikes is a modular RESTful backend service built with Node.js, Express.js, and SQLite to digitize campus bicycle sharing. It replaces paper…",
+      "readmeSha": "4e9c8d07b1fbd6a368cdc3e378cc35f644eb4eeb",
+      "readmePushedAt": "2026-11-28T09:34:34Z"
     },
     {
       "name": "portfolio",
@@ -23,10 +23,10 @@
       "topics": [],
       "stargazers_count": 1,
       "updated_at": "2026-11-15T03:42:47Z",
-      "pushed_at": "2026-11-27T11:26:37Z",
+      "pushed_at": "2026-11-27T20:12:04Z",
       "overview": "A static, single-page portfolio with no build step or runtime dependencies.",
       "readmeSha": "213642da98439e24fb7c74d5dd8813a551b1be15",
-      "readmePushedAt": "2026-11-27T11:26:37Z"
+      "readmePushedAt": "2026-11-27T20:12:04Z"
     },
     {
       "name": "backend_lab",
@@ -79,10 +79,10 @@
       "topics": [],
       "stargazers_count": 0,
       "updated_at": "2026-10-14T10:41:55Z",
-      "pushed_at": "2026-10-14T10:41:52Z",
+      "pushed_at": "2026-11-28T09:36:24Z",
       "overview": "SIH Problem Statement 206 — “AI-Based Early Warning and Landslide Risk Monitoring System in NER.”",
-      "readmeSha": "cc8dfa7356bd7a5fe5a1a436696fa9c5cf3efe7d",
-      "readmePushedAt": "2026-10-14T10:41:52Z"
+      "readmeSha": "21972b4715a86117f450672ea2a68894d7128539",
+      "readmePushedAt": "2026-11-28T09:36:24Z"
     },
     {
       "name": "restaurant-ordering-admin-dashboard-prototype-",
@@ -239,5 +239,5 @@
       "readmePushedAt": "2026-06-11T04:04:51Z"
     }
   ],
-  "lastSynced": "2026-11-27T20:12:02Z"
+  "lastSynced": "2026-11-28T09:39:05Z"
 }

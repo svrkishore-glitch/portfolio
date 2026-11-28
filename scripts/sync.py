@@ -23,8 +23,21 @@ def request(url, headers=None, data=None):
         return response.read()
 
 def save(name, payload):
-    payload["lastSynced"] = NOW()
     path = DATA / name
+    existing = {}
+    try:
+        existing = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, TypeError):
+        existing = {}
+
+    # Avoid rewriting JSON (and triggering empty git commits) when only lastSynced changed.
+    prev_comparable = {k: v for k, v in existing.items() if k != "lastSynced"} if isinstance(existing, dict) else {}
+    next_comparable = {k: v for k, v in payload.items() if k != "lastSynced"}
+    if prev_comparable == next_comparable and "lastSynced" in existing:
+        print(f"No data changes for {path.relative_to(ROOT)}")
+        return
+
+    payload["lastSynced"] = NOW()
     temp = path.with_suffix(path.suffix + ".tmp")
     temp.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     temp.replace(path)
@@ -107,25 +120,22 @@ def shorten_overview(text):
     return shortened.rstrip(" ,;:-") + "…"
 
 def curated_sync_summary(current_repo_names):
-    """Read curated repo mapping from the page so sync logs match its config."""
+    """Read curated repo mapping from data/curated.json so sync logs match its config."""
     try:
-        html = (ROOT / "index.html").read_text(encoding="utf-8")
-    except OSError:
+        curated = json.loads((DATA / "curated.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError, TypeError):
         return [], []
-    block = re.search(r"const\s+curated\s*=\s*\[(.*?)\]\s*;", html, re.S)
-    if not block:
+    if not isinstance(curated, list):
         return [], []
 
     current = {re.sub(r"[^a-z0-9]", "", str(name).casefold()) for name in current_repo_names}
     matched, hidden = [], []
-    for raw in re.findall(r"\{([^{}]*)\}", block.group(1)):
-        name_match = re.search(r"\bname\s*:\s*'([^']*)'", raw)
-        if not name_match:
+    for entry in curated:
+        if not isinstance(entry, dict) or not entry.get("name"):
             continue
-        name = name_match.group(1)
-        repo_match = re.search(r"\brepo\s*:\s*'([^']*)'", raw)
-        repo = repo_match.group(1).strip() if repo_match else name.strip()
-        always = bool(re.search(r"\balwaysShow\s*:\s*true\b", raw))
+        name = str(entry["name"])
+        repo = str(entry.get("repo") or name).strip()
+        always = bool(entry.get("alwaysShow"))
         key = re.sub(r"[^a-z0-9]", "", repo.casefold())
         if key and key in current:
             matched.append(f"{name} -> {repo}")
@@ -266,14 +276,17 @@ if __name__ == "__main__":
     DATA.mkdir(exist_ok=True)
     parser = argparse.ArgumentParser()
     parser.add_argument("--profiles-only", action="store_true", help="sync LeetCode and GFG only")
+    parser.add_argument("--strict", action="store_true", help="exit non-zero if any individual sync job fails")
     args = parser.parse_args()
-    failed = False
+    failures = 0
     jobs = (sync_leetcode, sync_gfg) if args.profiles_only else (sync_github, sync_leetcode, sync_gfg)
     for job in jobs:
-        try: job()
+        try:
+            job()
         except Exception as exc:
-            failed = True
+            failures += 1
             print(f"{job.__name__} failed; existing data retained: {exc}", file=sys.stderr)
-    if failed: sys.exit(1)
+    if failures == len(jobs) or (args.strict and failures > 0):
+        sys.exit(1)
 
 
